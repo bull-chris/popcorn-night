@@ -1,1 +1,1 @@
-# popcorn-night
+# Repository for Movie Browsing website, Popcorn Night
