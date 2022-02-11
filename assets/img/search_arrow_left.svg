@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.83 34.72">
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Feature_Movies" data-name="Feature Movies">
+      <g id="Featured_Movie_Text_and_Background" data-name="Featured Movie Text and Background">
+        <g id="search_arrow_left">
+          <polyline id="arrow" points="20.25 2.83 5.66 17.42 20.13 31.89" fill="none" stroke="#c95f17" stroke-miterlimit="10" stroke-width="8"/>
+          <line id="line" x1="5.66" y1="17.42" x2="55.83" y2="17.42" fill="none" stroke="#c95f17" stroke-miterlimit="10" stroke-width="8"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

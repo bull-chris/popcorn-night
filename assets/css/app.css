@@ -1,0 +1,878 @@
+/* Chris Bull - Popcorn Night Dynamic Site CSS */
+
+/* import Franklin Gothic fonts to use for the site */
+@font-face {
+    font-family: Franklin-Heavy;
+    src: url('https://staging.chrisbull-webdevelopment.ca/popcorn-night/assets/fonts/FRAHV.TTF') format('truetype');
+
+}
+
+@font-face {
+    font-family: Franklin-Medium;
+    src: url('https://staging.chrisbull-webdevelopment.ca/popcorn-night/assets/fonts/framd.ttf') format('truetype');
+}
+
+/* font settings for the headings on the website */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Franklin-Heavy', sans-serif;
+}
+
+/* h6 settings */
+h6 {
+    font-size: 18px;
+}
+
+/* font settings for the paragraphs on the website */
+p {
+    font-family: 'Franklin-Medium', sans-serif;
+}
+
+/* color settings for the dynamic site to use */
+/* Reference: https://www.w3schools.com/css/css3_gradients_radial.asp */
+/* Referenced the above link for parameter usage in radial-gradients */
+.siteDark {
+    background-color: #964214;
+}
+
+.siteDarkest {
+    /* background-image: radial-gradient(#964214 85%, #3C2415); */
+    background-color: #964214;
+}
+
+.siteLight {
+    background-color: #C95F17;
+}
+
+/* class to hide content when not needed */
+.notActive {
+    display: none;
+}
+
+/* set the content classes to display flex */
+section, .popcornNightSplashPage, .popcornNightMoviePage, .popcornNightPersonPage {
+    display: flex;
+    color: #fff;
+}
+
+/* popcornNightMoviePage and popcornNightPersonPage settings */
+.popcornNightMoviePage, .popcornNightPersonPage {
+    padding-bottom: 2.5rem;
+}
+
+/* header settings */
+header {
+    padding: 1rem 0rem;
+}
+
+/* fullHeader settings */
+#fullHeader {
+    border-bottom:rgba(161, 159, 159, 0.6) solid 5px;
+}
+
+/* popcornNightLogoHeader settings */
+.popcornNightLogoHeader {
+    cursor: pointer;
+}
+
+/* add top padding to search bar in the header */
+#searchBarHeader {
+    padding-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    position: relative;
+}
+
+/* search bar settings */
+#headerSearch, #splashPageSearch {
+    background-color: rgb(18, 18, 18);
+    border-radius: 1rem;
+    border: none;
+}
+
+/* input type text settings */
+/* Reference: https://www.w3schools.com/css/css_form.asp */
+/* Referenced above link for assistance with selecting input type in CSS */
+input[type=text] {
+    color: #fff;
+    padding-left: 1rem;
+}
+
+/* header search input settings */
+#headerSearch {
+    background-color: #48210c;
+    border-radius: 1rem;
+    z-index: 5;
+}
+
+/* header search entries settings */
+.searchEntries {
+    position: absolute;
+    border-radius: 1rem;
+    z-index: 4;
+    top: 32.5px;
+    padding-top: 45px;
+    background-color: #48210c;
+    display: none;
+    width: 92.5%;
+    box-shadow: 2px 4px 10px #331101;
+}
+
+/* searchBarMovie hover settings */
+.searchBarMovie:hover {
+    background-color: #964214;
+    cursor: pointer;
+    border: 1px solid #331101;
+    border-radius: 1rem;
+}
+
+/* searchBarPerson hover settings */
+.searchBarPerson:hover {
+    background-color: #964214;
+    cursor: pointer;
+    border: 1px solid #331101;
+    border-radius: 1rem;
+}
+
+/* searchBarMovie and searchBarPerson img style settings */
+.searchBarMovie img, .searchBarPerson img {
+    width: 25%;
+    padding: 1rem;
+    float: right;
+}
+
+/* searchBarMovie and searchBarPerson h6 style settings */
+.searchBarMovie h6, .searchBarPerson h6 {
+    padding-left: 1rem;
+    padding-top: 3rem;
+    float: left;
+    color: white;
+}
+
+/* searchOrdering style settings */
+.searchOrdering {
+    float: none;
+    clear: both;
+    overflow: hidden;
+}
+
+/* search arrow svg settings */
+#searchArrow {
+    height: 1.6rem;
+    pointer-events: none;
+}
+
+/* header search button and search arrow hover settings */
+#headerSearchButton:hover, #searchArrow:hover {
+    cursor: pointer;
+}
+
+/* media query settings for header */
+@media print, screen and (max-width: 540px) {
+
+    /* header mobile settings */
+    header {
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+
+    /* popcornNightLogoHeader mobile settings */
+    .popcornNightLogoHeader {
+        margin-top: 1rem;
+    }
+}
+
+/** Splash Page Styling **/
+
+/* splashPageIntro settings */
+#splashPageIntro {
+    padding: 25px;
+}
+
+/* splashPageText settings */
+#splashPageText {
+    margin: 8rem 0px 0px 0px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* splashPageText h1 settings */
+#splashPageText h1 {
+    font-size: 70px;
+    line-height: 1.25;
+}
+
+/* splashPageText p settings */
+#splashPageText p {
+    font-size: 22px;
+    margin: 1rem 0rem 0.3rem 0rem;
+}
+
+/* splash page search bar settings */
+#searchBarSplash {
+    display: flex;
+    width: 97.5%;
+    position: relative;
+    z-index: 3;
+}
+
+/* splash bar search entries settings */
+/* Reference: https://www.w3schools.com/cssref/css3_pr_overflow-y.asp */
+/* Used above reference for information on overflow-y property  */
+.splashSearchEntries {
+    position: absolute;
+    border-radius: 1rem;
+    height: 200px;
+    width: 98.5%;
+    top: 30px;
+    padding-top: 32.5px;
+    background-color: #48210c;
+    overflow-y: scroll;
+    display: none;
+    box-shadow: 2px 4px 10px #331101;
+}
+
+/* splashBarMovie and splashBarPerson hover settings */
+.splashBarMovie:hover, .splashBarPerson:hover {
+    background-color: #964214;
+    cursor: pointer;
+    border: 1px solid #331101;
+    border-radius: 1rem;
+}
+
+/* splashBarMovie and splashBarPerson img style settings */
+.splashBarMovie img, .splashBarPerson img {
+    width: 20%;
+    padding: 1rem;
+    float: right;
+}
+
+/* splashBarMovie and splashBarPerson h6 style settings */
+.splashBarMovie h6, .splashBarPerson h6 {
+    width: 80%;
+    padding-left: 1rem;
+    padding-top: 2rem;
+    float: left;
+    color: white;
+}
+
+/* splashPageSearch settings */
+#splashPageSearch {
+    margin-top: 25px;
+    border-radius: 1rem;
+    background-color: #48210c;
+    z-index: 3;
+
+}
+
+/* featured movies title settings */
+#splashPageFeaturedText {
+    text-align: center;
+    margin: 1rem 0rem;
+    font-size: 45px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/* featured movie div settings */
+#splashPageMovies {
+    padding-top: 0.75rem;
+    padding-bottom: 2.0rem;
+}
+
+/* featured movie and info settings */
+.splashPageMovie {
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    padding: 0rem 0.65rem;
+    cursor: pointer;
+    min-height: 80%;
+}
+
+/* splashPageMovie img settings */
+.splashPageMovie img {
+    margin-bottom: -15px;
+}
+
+/* movie thumbnail settings */
+.movieThumbnail {
+    position: relative;
+}
+
+/* movie rating settings */
+/* Reference: https://www.w3schools.com/howto/howto_css_image_text.asp */
+/* Referenced above link for a refresher on overlapping text with position absolute */
+.movieRating {
+    background-color: #C95F17;
+    border: 1px solid #331101;
+    box-shadow: 1px 2px 5px #331101;
+    padding: 0.1rem 0.5rem;
+    position: absolute;
+    opacity: 0.9;
+    right: -4px;
+    bottom: 0px; 
+}
+
+/* movie rating for splash page movies settings */
+.movieRatingSplash {
+    background-color: #C95F17;
+    border: 1px solid #331101;
+    box-shadow: 1px 2px 5px #331101;
+    padding: 0.1rem 0.5rem;
+    position: absolute;
+    opacity: 0.9;
+    right: -4px;
+    bottom: 5px;
+}
+
+/* movie rating for the movie selected on the movie page settings */
+.movieRatingChosenMovie {
+    background-color: #C95F17;
+    border: 1px solid #331101;
+    box-shadow: 2px 2px 10px #331101;
+    padding: 0.5rem 2rem;
+    position: absolute;
+    opacity: 0.9;
+    right: 50px;
+    bottom: -25px;
+    font-size: 28px;
+}
+
+/* splash page featured movie h5, h6, and p settings */
+.splashPageMovie h5, .splashPageMovie h6, .splashPageMovie p {
+    margin: 0px;
+    color: #fff;
+}
+
+/* switch featured movies button settings */
+.switchFeaturedButton {
+    margin: 17.5rem 0rem;
+    background-color: #331101;
+    padding: 0.65rem 0.8rem 0.5rem 1rem;
+    border-radius: 1rem;
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* switchFeaturedLast button settings */
+#switchFeaturedLast {
+    margin-left: 1.5rem;
+    padding: 0.65rem 1rem 0.5rem 0.8rem;
+}
+
+/* media query settings for splash page */
+@media print, screen and (max-width: 540px) {
+
+    /* splashPageText mobile settings */
+    #splashPageText {
+        margin: 1rem 0rem 1.5rem 0rem;
+        text-align: center;
+    }
+
+    /* splashPageText h1 mobile settings */
+    #splashPageText h1 {
+        font-size: 45px;
+        line-height: 1.25;
+    }
+
+    /* splash page featured movies title mobile settings */
+    #splashPageFeaturedText h1 {
+        font-size: 35px;
+    }
+
+    /* splash page featured movie div mobile settings */
+    #splashPageMovies {
+        padding-top: 0.75rem;
+        padding-bottom: 2.0rem;
+    }
+
+    /* splash page featured movie and info mobile settings */
+    .splashPageMovie {
+        text-align: center;
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* switch featured movies button mobile settings */
+    .switchFeaturedButton, #switchFeaturedLast {
+        margin: 24rem 0rem;
+        background-color: #331101;
+        padding: 1rem 0.25rem;
+        border-radius: 1rem;
+        opacity: 1;
+        cursor: pointer;
+    }
+
+    /* switch featured movies next button mobile settings */
+    #switchFeaturedNext {
+        float: right;
+    }
+
+    /* switch featured movies button object mobile settings */
+    .switchFeaturedButton object {
+        width: 1.5rem;
+    }
+
+    /* splash bar search entries mobile settings */
+    .splashSearchEntries {
+        height: auto;
+    }
+
+    /* splash page search bar mobile settings */
+    #searchBarSplash {
+        display: none;
+    }
+}
+
+/** Movie Page Styling **/
+
+/* movie image settings */
+#movieImage {
+    margin-top: 2rem;
+}
+
+/* movie title settings */
+#movieTitle {
+    margin-top: 1rem;
+}
+
+/* fun fact button settings */
+#findFunFact {
+    margin-top: -10px;
+}
+
+/* fun fact logo settings */
+#funFactLogo {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* fun fact text settings */
+#funFactText {
+    display: none;
+    background-color: #331101;
+    box-shadow: 5px 5px 10px #331101;
+    padding: 1rem;
+}
+
+/* movie release date settings */
+#movieRelease {
+    margin-top: 20px;
+}
+
+/* movie description settings */
+#movieDescription {
+    margin: 20px 0px;
+    font-size: 18px;
+}
+
+/* movie other information settings */
+#movieOtherInfo {
+    margin: 20px 0px;
+    font-size: 18px;
+}
+
+/* movie other information title settings */
+.movieOtherInfoTitles {
+    font-family: "Franklin-Heavy";
+}
+
+/* actors section title settings */
+#movieActorsTitle {
+    margin-top: 3rem; 
+}
+
+/* movie actors settings */
+.movieActors {
+    margin: 0.625rem 1rem 0rem 1rem;
+    cursor: pointer;
+}
+
+/* actor info settings */
+.nameOfActor, .characterOfActor {
+    margin: 0;
+}
+
+/* name of actor info specific settings */
+.nameOfActor {
+    margin-top: 0.5rem;
+    margin-bottom: -0.15rem;
+}
+
+/* characterOfActor settings */
+.characterOfActor {
+    font-style: italic;
+}
+
+/* movie trailer title settings */
+#movieTrailerTitle {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* similar movie title, media title settings */
+#movieSimilarTitle, #movieMediaTitle {
+    margin-top: 1rem;
+}
+
+/* movie trailer video preview settings */
+#movieTrailerVideo {
+    margin-top: 0.625rem;
+    margin-bottom: 1.5rem;
+}
+
+/* movie trailer video iframe settings */
+iframe {
+    width: 100%;
+    height: 680px;
+}
+
+/* view more button sections settings */
+#similarMovieButtonSection, #movieMediaButtonSection {
+    text-align: center;
+}
+
+/* similar movie image settings */
+.similarMovie {
+    margin: 0.625rem 1rem 0rem 1rem;
+    cursor: pointer;
+}
+
+/* similar movie info settings */
+.similarMovie h5, .similarMovie h6, .similarMovie p {
+    margin: 0;
+}
+
+/* view more buttons settings */
+.movieActorsButton, #similarMovieButton, #mediaMovieButton {
+    margin-top: -10px;
+}
+
+/* media image settings */
+.mediaMovie {
+    margin: 0.625rem 1rem 0rem 1rem;
+}
+
+/* media query settings for movie page */
+@media print, screen and (max-width: 540px) {
+
+    /* movie title h1 mobile settings */
+    #movieTitle h1 {
+        margin-top: 1.5rem;
+        font-size: 36px;
+    }
+
+    /* fun fact button h6 mobile settings */
+    #findFunFact h6 {
+        margin-top: 0px;
+        font-size: 16px;
+        font-weight: 100;
+        font-family: "Franklin-Medium";
+    }
+
+    /* fun fact logo mobile settings */
+    #funFactLogo {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    /* movie trailer video preview mobile settings */
+    #movieTrailerVideo {
+        margin-top: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    /* movie trailer title mobile settings */
+    #movieTrailerTitle {
+        margin-bottom: 1rem;
+    }
+
+    /* movie trailer video iframe mobile settings */
+    iframe {
+        width: 100%;
+        height: 225px;
+    }
+
+    /* movie actors title mobile settings */
+    #movieActorsTitle {
+        margin-top: 1rem;
+    }
+
+    /* movie media title and similar movie title mobile settings */
+    #movieMediaTitle, #movieSimilarTitle {
+        margin-top: 1.5rem;
+        margin-bottom: 0.25rem;
+    }
+
+    /* movie rating for the movie selected on the movie page mobile settings */
+    .movieRatingChosenMovie {
+        background-color: #C95F17;
+        border: 1px solid #331101;
+        box-shadow: 2px 2px 10px #331101;
+        padding: 0.5rem 2rem;
+        position: absolute;
+        opacity: 0.9;
+        right: -5px;
+        bottom: -25px;
+        font-size: 28px;
+    }
+
+    /* movie actors/actresses title h3, movie trailer title h3, similar movie title h3, and movie media title h3 mobile settings */
+    #movieActorsTitle h3, #movieTrailerTitle h3, #movieSimilarTitle h3, #movieMediaTitle h3 {
+        font-size: 24px;
+    }
+
+    /* view more button sections mobile settings */
+    #similarMovieButtonSection, #movieMediaButtonSection {
+        margin-bottom: 0px;
+    }
+
+    /* view more buttons mobile settings */
+    .movieActorsButton, #similarMovieButton, #mediaMovieButton {
+        margin-top: 5px;
+    }
+
+    /* popcornNightMoviePage mobile settings */
+    .popcornNightMoviePage {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+/** Actor/Actress page styling **/
+
+/* actor image settings */
+#actorImage {
+    margin-top: 2rem;
+}
+
+/* actor name settings */
+#actorName {
+    margin-top: 20px;
+}
+
+/* actor birth date settings */
+#actorBirth {
+    margin-top: 10px;
+}
+
+/* actor birth h6 tag settings */
+#actorBirth h6 {
+    margin-top: -5px;
+}
+
+/* actor biography settings */
+#actorBio {
+    margin-top: 20px;
+}
+
+/* actor biography paragraph settings */
+#actorBio p {
+    font-size: 18px;
+}
+
+/* actor movies title and actor media title settings */
+#actorMoviesTitle, #actorMediaTitle {
+    margin-top: 50px;
+    margin-bottom: 12.5px;
+}
+
+/* actor movies image settings */
+.actorMovies {
+    margin: 0.625rem 1rem 0rem 1rem;
+    cursor: pointer;
+}
+
+/* actor movies h5, h6, and p tag settings */
+.actorMovies h5, .actorMovies h6, .actorMovies p {
+    margin: 0;
+}
+
+/* actor movies button and media actor button settings */
+#actorMoviesButton, #mediaActorButton {
+    margin-top: -10px;
+    margin-bottom: 40px;
+}
+
+/* actor media image settings */
+.mediaActor {
+    margin: 0.625rem 1rem 0rem 1rem;
+}
+
+/* viewMoreButtons settings */
+.viewMoreButtons {
+    display: flex;
+    color: #fff;
+    padding: 0.25rem;
+    cursor: pointer;
+    height: 2rem;
+    position: relative;
+    z-index: 2;
+    margin-top: 0.5rem;
+}
+
+/* scroll next buttons settings */
+#movieActorNext, #similarMovieNext, #movieMediaNext, #featuredInNext, #actorMediaNext {
+    float: right;
+}
+
+/* viewMoreText settings */
+.viewMoreText {
+    padding: 0px 0.5rem;
+    opacity: 0.3;
+}
+
+/* viewMoreButtons hover and nested viewMoreText settings */
+.viewMoreButtons:hover .viewMoreText {
+    opacity: 0.75;
+    scale: 1.05;
+}
+
+/* media query settings for actor/actress page */
+@media print, screen and (max-width: 540px) {
+
+    /* actor name h1 mobile settings */
+    #actorName h1 {
+        font-size: 36px;
+    }
+
+    /* actor biography h3 mobile settings */
+    #actorBio h3 {
+        font-size: 24px;
+    }
+
+    /* actor movies title h3 and actor media title h3 mobile settings */
+    #actorMoviesTitle h3, #actorMediaTitle h3 {
+        font-size: 24px;
+    }
+
+    /* actor movies title mobile settings */
+    #actorMoviesTitle {
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    /* actor media title mobile settings */
+    #actorMediaTitle {
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    /* actor movies button and media actor button mobile settings */
+    #actorMoviesButton, #mediaActorButton {
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    /* popcornNightPersonPage mobile settings */
+    .popcornNightPersonPage {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    /* viewMoreButtons mobile settings */
+    .viewMoreButtons {
+        margin-top: 0rem;
+    }
+}
+
+/* footer settings */
+footer {
+    color: #fff;
+    padding: 1rem 0rem;
+}
+
+/* footer logo settings */
+.popcornNightLogo {
+    text-align: center;
+    cursor: pointer;
+}
+
+/* social media text links settings */
+#socialMediaText {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* social media heading and paragraph settings */
+#socialMediaText h3, #socialMediaText p {
+    margin: 0px;
+}
+
+/* contact info text settings */
+#contactInfoText {
+    text-align: right;
+    padding-top: 10px;
+}
+
+/* contact info heading and paragraph settings */
+#contactInfoText h3, #contactInfoText p {
+    margin: 0px;
+}
+
+/* media query settings for footer */
+@media print, screen and (max-width: 540px) {
+
+    /* social media text links mobile settings */
+    #socialMediaText {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    /* contact info text mobile settings */
+    #contactInfoText {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/** Foundation Tooltip Styling Overrides **/
+
+/* foundation tooltip styling override settings */
+.tooltip {
+    max-width: 40rem;
+    background-color: #331101;
+    box-shadow: 5px 5px 10px #331101;
+    padding: 1rem;  
+}
+
+/* foundation tooltip bottom before styling override settings */
+.tooltip.bottom::before {
+    border-color: transparent transparent #331101;
+}
+
+/** Slick Slider Styling Overrides **/
+
+/* slick slider dots styling override settings */
+.slick-dots {
+    bottom: -30px;
+    z-index: 1;
+}
+
+/* slick slider dots button before styling override settings */
+.slick-dots li button::before {
+    font-size: 2.5rem;
+    color: #331101;
+}
+
+/* slick slider dots active button before styling override settings */
+.slick-dots li.slick-active button:before
+{
+    font-size: 3.5rem;
+    opacity: 1;
+    color: #C95F17;
+}
+
+/* media query settings for overrides */
+@media print, screen and (max-width: 540px) {
+
+    /* foundation tooltip styling override mobile settings */
+    .tooltip {
+        width: 20rem;
+    }
+
+    /* slick slider dots styling overrides mobile settings */
+    .slick-dots{
+        bottom: -35px;
+    }
+}

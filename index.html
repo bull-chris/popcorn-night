@@ -1,0 +1,278 @@
+<!-- Chris Bull - Popcorn Night Dynamic Site HTML -->
+
+<!doctype html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title of the Dynamic Site HTML Page -->
+    <title>Popcorn Night Movies Dynamic Site</title>
+
+    <!-- CSS attached to the HTML page -->
+    <link rel="stylesheet" href="assets/css/foundation.css">
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+
+<body>
+
+    <!-- Popcorn Night Dynamic Site Header Layout -->
+    <div id="fullHeader" class="siteLight">
+        <main class="grid-container">
+            <header class="grid-x grid-padding-x">
+                <!-- Popcorn Night Logo -->
+                <div class="large-4 small-12 cell popcornNightLogoHeader">
+                    <img src="assets/img/popcorn_night_logo.png" alt="Popcorn Night Logo">
+                </div>
+                <div class="large-4 small-12 cell"></div>
+                <!-- Popcorn Night Header Search Bar -->
+                <div class="large-4 small-12 cell" id="searchBarHeader">
+                    <input type="text" id="headerSearch" autocomplete="off" value="" placeholder="Search for your movie..."/>
+                    <div class="searchEntries"></div>
+                </div>
+            </header>
+        </main>
+    </div>
+
+    <!-- Popcorn Night Dynamic Site Content Layout -->
+    <div class="siteDark">
+        <main id="app" class="grid-container">
+
+            <!-- Popcorn Night Splash Page -->
+            <section class="grid-x grid-padding-x popcornNightSplashPage notActive">
+                <!-- Splash page intro text and search bar -->
+                <div class="large-6 medium-12 small-12 cell" id="splashPageIntro">
+                    <div class="large-6 medium-6 small-6 cell" id="splashPageText">
+                        <h1>Find your movie for Movie and Popcorn Night!</h1>
+                        <p>Search for hundreds of movies with Popcorn Night.</p>
+                    </div>
+                    <div class="large-5 medium-12 small-6 cell" id="searchBarSplash">
+                        <input type="text" id="splashPageSearch" autocomplete="off" value="" placeholder="Search for your movie...">
+                        <div class="splashSearchEntries"></div>
+                    </div>
+                </div>
+                <!-- Splash page featured movies section -->
+                <div class="large-6 medium-12 small-12 cell siteDarkest" id="splashPageMovies">
+                    <div class="large-6 small-12 cell" id="splashPageFeaturedText">
+                        <h1>Featured Movies</h1>
+                    </div>
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-2 small-2 cell">
+                            <button class="switchFeaturedButton" id="switchFeaturedLast">
+                                <object id="searchArrow" data="assets/img/left_arrow.svg" type="image/svg+xml"></object>
+                            </button>
+                        </div>
+                        <div class="large-8 small-8 cell">
+                            <div class="splashFeaturedScrolling_Row1"></div>
+                            <div class="splashFeaturedScrolling_Row2"></div>
+                        </div>
+                        <div class="large-2 small-2 cell">
+                            <button class="switchFeaturedButton" id="switchFeaturedNext">
+                                <object id="searchArrow" data="assets/img/right_arrow_1.svg" type="image/svg+xml"></object>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popcorn Night Movie Page -->
+            <section class="grid-x grid-padding-x popcornNightMoviePage notActive">
+                <!-- Movie Image -->
+                <div class="large-5 medium-5 small-12 cell">
+                    <div class="large-5 medium-5 small-12 cell" id="movieImage">
+                        <div class="movieThumbnail">
+                            <img src="" alt="">
+                            <h5 class="movieRatingChosenMovie"></h5>
+                        </div>
+                    </div>
+                </div>
+                <!-- Movie Name and Information Section -->
+                <div class="large-7 medium-7 small-12 cell">
+                    <div class="large-7 small-12 cell" id="movieTitle"></div>
+                    <div class="large-7 small-12 cell" id="movieRelease"></div>
+                    <div class="large-7 small-12 cell" id="movieDescription"></div>
+                    <div class="large-7 small-12 cell" id="movieOtherInfo"></div>
+                </div>
+                <!-- Movie Actor/Actress Section -->
+                <div class="large-12 small-12 cell">
+                    <div class="large-12 small-12 cell" id="movieActorsTitle">
+                        <h3> Movie Actors/Actresses</h3>    
+                    </div>
+                    <div class="grid-x grid-margin-x" id="movieActorsSection">
+                        <div class="cell large-12 small-12">
+                            <div class="grid-x grid-margin-x actorScrolling"></div>
+                        </div>
+                        <div class="large-6 small-6 cell movieActorsButton">
+                            <button class="viewMoreButtons" id="movieActorLast">
+                                <object id="searchArrow" data="assets/img/left_arrow.svg" type="image/svg+xml"></object>
+                                <p class="viewMoreText">Back</p>
+                            </button>
+                        </div>
+                        <div class="large-6 small-6 cell movieActorsButton">
+                            <button class="viewMoreButtons" id="movieActorNext">
+                                <p class="viewMoreText">Forward</p>
+                                <object id="searchArrow" data="assets/img/right_arrow_1.svg" type="image/svg+xml"></object>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Movie Trailer Section -->
+                <div class="large-12 small-12 cell movieTrailerContent">
+                    <div class="large-12 small-12 cell" id="movieTrailerTitle">
+                        <h3>Movie Trailer</h3>
+                    </div>
+                    <div class="large-12 small-12 cell" id="movieTrailerVideo">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <!-- Similar movies section -->
+                <div class="large-6 small-12 cell similarMovieContent">
+                    <div class="large-6 small-12 cell" id="movieSimilarTitle">
+                        <h3>Similar Movies</h3> 
+                    </div>
+                    <div class="grid-x grid-margin-x similarMovieScrolling" id="similarMovieSection"></div>
+                    <div class="large-6 small-12 cell" id="similarMovieButtonSection">
+                        <div class="grid-x grid-margin-x">
+                            <div class="large-6 small-6 cell" id="similarMovieButton">
+                                <button class="viewMoreButtons" id="similarMovieLast">
+                                    <object id="searchArrow" data="assets/img/left_arrow.svg" type="image/svg+xml"></object>
+                                    <p class="viewMoreText">Back</p>
+                                </button>
+                            </div>
+                            <div class="large-6 small-6 cell" id="similarMovieButton">
+                                <button class="viewMoreButtons" id="similarMovieNext">
+                                    <p class="viewMoreText">Forward</p>
+                                    <object id="searchArrow" data="assets/img/right_arrow_1.svg" type="image/svg+xml"></object>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Similar movies and Movie media section divider -->
+                <div class="large-1 cell moviePageDivider"></div>
+                <!-- Movie media section -->
+                <div class="large-5 small-12 cell movieMediaContent">
+                    <div class="large-6 small-12 cell" id="movieMediaTitle">
+                        <h3>Movie Media</h3>
+                    </div>
+                    <div class="grid-x grid-margin-x movieMediaScrolling" id="movieMediaSection"></div>
+                    <div class="large-6 small-12 cell" id="movieMediaButtonSection">
+                        <div class="grid-x grid-margin-x">
+                            <div class="large-6 small-6 cell" id="mediaMovieButton">
+                                <button class="viewMoreButtons" id="movieMediaLast">
+                                    <object id="searchArrow" data="assets/img/left_arrow.svg" type="image/svg+xml"></object>
+                                    <p class="viewMoreText">Back</p>
+                                </button>
+                            </div>
+                            <div class="large-6 small-6 cell" id="mediaMovieButton">
+                                <button class="viewMoreButtons" id="movieMediaNext">
+                                    <p class="viewMoreText">Forward</p>
+                                    <object id="searchArrow" data="assets/img/right_arrow_1.svg" type="image/svg+xml"></object>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Popcorn Night Actor/Actress Page -->
+            <section class="grid-x grid-padding-x popcornNightPersonPage notActive">
+                <!-- Actor/Actress Image -->
+                <div class="large-5 medium-5 small-12 cell">
+                    <div class="large-6 small-12 cell" id="actorImage">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <!-- Actor/Actress Information Section -->
+                <div class="large-7 medium-7 small-12 cell">
+                    <div class="large-6 small-12 cell" id="actorName"></div>
+                    <div class="large-6 small-12 cell" id="actorBirth"></div>
+                    <div class="large-6 small-12 cell" id="actorBio"></div>
+                </div>
+                <!-- Featured in movie section -->
+                <div class="large-6 small-12 cell actorMoviesContent">
+                    <div class="large-6 small-12 cell" id="actorMoviesTitle">
+                        <h3>Movies Featured In</h3>
+                    </div>
+                    <div class="grid-x grid-margin-x featuredInScrolling" id="actorMoviesSection"></div>
+                    <div class="large-6 small-12 cell" id="actorMoviesButtonSection">
+                        <div class="grid-x grid-margin-x">
+                            <div class="large-6 small-6 cell" id="actorMoviesButton">
+                                <button class="viewMoreButtons" id="featuredInLast">
+                                    <object id="searchArrow" data="assets/img/left_arrow.svg" type="image/svg+xml"></object>
+                                    <p class="viewMoreText">Back</p>
+                                </button>
+                            </div>
+                            <div class="large-6 small-6 cell" id="actorMoviesButton">
+                                <button class="viewMoreButtons" id="featuredInNext">
+                                    <p class="viewMoreText">Forward</p>
+                                    <object id="searchArrow" data="assets/img/right_arrow_1.svg" type="image/svg+xml"></object>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Featured in movies and Actor/Actress media section divider -->
+                <div class="large-1 cell personPageDivider"></div>
+                <!-- Actor/Actress media Section -->
+                <div class="large-5 small-12 cell actorMediaContent">
+                    <div class="large-6 small-12 cell" id="actorMediaTitle"></div>
+                    <div class="grid-x grid-margin-x actorMediaScrolling" id="actorMediaSection"></div>
+                    <div class="large-6 small-12 cell" id="mediaActorButtonSection">
+                        <div class="grid-x grid-margin-x">
+                            <div class="large-6 small-6 cell" id="mediaActorButton">
+                                <button class="viewMoreButtons" id="actorMediaLast">
+                                    <object id="searchArrow" data="assets/img/left_arrow.svg" type="image/svg+xml"></object>
+                                    <p class="viewMoreText">Back</p>
+                                </button>
+                            </div>
+                            <div class="large-6 small-6 cell" id="mediaActorButton">
+                                <button class="viewMoreButtons" id="actorMediaNext">
+                                    <p class="viewMoreText">Forward</p>
+                                    <object id="searchArrow" data="assets/img/right_arrow_1.svg" type="image/svg+xml"></object>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Popcorn Night Dynamic Site Footer Layout -->
+    <div class="siteLight">
+        <main class="grid-container">
+            <footer class="grid-x grid-padding-x">
+                <!-- Popcorn Night Social Media Links -->
+                <div class="large-4 small-12 cell" id="socialMediaText">
+                    <h3>Follow Popcorn Night</h3>
+                    <p>Twitter | Instagram | Snapchat</p>
+                    <p>TikTok  | Facebook</p>
+                </div>
+                <!-- Popcorn Night Footer Logo -->
+                <div class="large-4 small-12 cell popcornNightLogo">
+                    <img src="assets/img/popcorn_night_footer_logo.png" alt="Popcorn Night Footer Logo">
+                </div>
+                <!-- Popcorn Night Contact Information -->
+                <div class="large-4 small-12 cell" id="contactInfoText">
+                    <h3>Contact Popcorn Night</h3>
+                    <p>Business - popcornnight@email.com</p>
+                    <p>Site Issues - popcornnight.site.admin@email.com</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+
+    <!-- Javascript scripts attached to the HTML page -->
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/foundation.js"></script>
+    <script src="assets/js/sammy.min.js" type="text/javascript"></script>
+    <script src="assets/js/sammy.template.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+    <script src="assets/js/slick.min.js" type="text/javascript"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
